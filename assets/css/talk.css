@@ -1,0 +1,22 @@
+.talk-margin {
+    float: left;
+    width: 100px;
+/*    text-align: right;*/
+    margin-right: 5px;
+    margin-left: -110px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size:14px;
+    color: grey
+}
+.talk-content {
+    float: left;
+    font-size:16px;
+    font-family: "Effra", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

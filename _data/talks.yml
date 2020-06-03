@@ -1,0 +1,103 @@
+- abstract: ''
+  conf: {link: 'https://indico.cern.ch/event/826136/', loc: ' CERN, Geneva, Switzerland',
+    name: The 16th Workshop of the LHC Higgs Cross Section Working Group}
+  date: 16-18/10/2019
+  pdf: https://indico.cern.ch/event/826136/contributions/3560473/attachments/1927391/3191007/STXS-uncertainties-VBF.pdf
+  title: VBF STXS uncertainties
+- abstract: ''
+  conf: {link: 'http://moriond.in2p3.fr/2019/EW/', loc: ' La Thuile, Italy', name: '54th
+      Rencontres de Moriond: Electroweak Interactions and Unified Theories'}
+  date: 03/2019
+  pdf: http://moriond.in2p3.fr/2019/EW/slides/1_Sunday/2_afternoon/8_yhaddad.pdf
+  title: Higgs properties (cross-sections, EFTs..) in CMS in Run2
+- abstract: ''
+  conf: {link: 'https://indico.cern.ch/event/740110/', loc: ' CERN, Geneva, Switzerland',
+    name: The 15th Workshop of the LHC Higgs Cross Section Working Group}
+  date: 12/2018
+  pdf: https://indico.cern.ch/event/740110/contributions/3192760/attachments/1768556/2872743/VBF-STSX-UNCERT-HXSWG.pdf
+  title: Uncertainty scheme for VBF STXS Bins
+- abstract: ''
+  conf: {link: 'https://conference.ippp.dur.ac.uk/event/624/', loc: ' Durham, United
+      Kingdom', name: Final HiggsTools Meeting}
+  date: 09/2017
+  pdf: https://conference.ippp.dur.ac.uk/event/624/contributions/3422/attachments/2916/3169/HTFinalMeeting-Higgs-yhaddad.pdf
+  title: Higgs decaying into photons measurements at CMS
+- abstract: ''
+  conf: {link: 'https://indico.cern.ch/event/604130/overview', loc: " Universit\xE0\
+      \ Degli Studi, Torino, Italy", name: HiggsTools Third Annual Meeting and Young
+      Editors School 2017}
+  date: 05/2017
+  pdf: https://indico.cern.ch/event/604130/contributions/2478303/attachments/1461239/2257200/PhiStarHgg_yhaddad.pdf
+  title: New variable for studying Higgs to photons transverse momentum distributions
+    at hadron colliders
+- abstract: ''
+  conf: {link: 'https://www.thphys.uni-heidelberg.de/~higgs/', loc: 'Heidelberg University,
+      Germany', name: Higgs Couplings 2017}
+  date: 11/2016
+  pdf: https://www.thphys.uni-heidelberg.de/~higgs/talks/haddad.pdf
+  title: Higgs to photons in ATLAS and CMS
+- abstract: ''
+  conf: {link: 'https://conference.ippp.dur.ac.uk/event/553/timetable/', loc: ' Durham
+      IPPP, United Kingdom', name: Jet vetoes and multiplicity observables}
+  date: 10/2016
+  pdf: https://conference.ippp.dur.ac.uk/event/553/contributions/3129/attachments/2645/2891/yhaddad-HiggsPlusJets-Durham2016.pdf
+  title: H+Jets@CMS
+- abstract: ''
+  conf: {link: .nan, loc: ' Rutherford Appleton Laboratory, Har-well Campus Didcot,
+      United Kingdom', name: Seminar at Particle Physics Department}
+  date: 02/2016
+  pdf: https://www.ppd.stfc.ac.uk/Pages/ppd_seminars_160217_talks_yacine_haddad.pdf
+  title: High granular calorimetry for the future international linear collider
+- abstract: ''
+  conf: {link: 'https://indico.cern.ch/event/489180/', loc: ' University of Pittsburgh,
+      USA', name: Phenomenology 2016 Symposium}
+  date: 11/2015
+  pdf: https://indico.cern.ch/event/489180/contributions/2158151/attachments/1270053/1881546/yhaddad-Pheno2016-Final.pdf
+  title: Higgs production and decays into bosons at 13 TeV in CMS
+- abstract: ''
+  conf: {link: 'https://www.qmul.ac.uk/spa/pprc/seminars/2015/items/high-granular-calorimetry-for-the-future-international-linear-collider.html',
+    loc: ' London, United Kingdom', name: Seminar at Queen Marry University}
+  date: 11/2015
+  pdf: https://indico.ph.qmul.ac.uk/indico/getFile.py/access?resId=0&materialId=slides&confId=62
+  title: High granular calorimetry for the future international linear collider
+- abstract: ''
+  conf: {link: 'https://indico.cern.ch/event/470228/', loc: 'Granada, Spain', name: 'HiggsTools: Second Annual Meeting'}
+  date: 04/2015
+  pdf: https://indico.cern.ch/event/470228/contributions/1989645/attachments/1256608/1855297/HT-2nd-annual-meeting.pdf
+  title: Recent Higgs to gamma gamma results at CMS
+- abstract: ''
+  conf: {link: 'http://higgstools2015.uni-freiburg.de/', loc: 'Freiburg, Germany', name: 'HiggsTools: First Annual Meeting'}
+  date: 04/2015
+  pdf: https://indico.cern.ch/event/373699/contributions/887203/attachments/744313/1021022/yhaddad_vbf_cms.pdf
+  title: Higgs boson production via Weak Boson Fusion in CMS
+- abstract: ''
+  conf: {link: 'https://lpsc-indico.in2p3.fr/Indico/event/1084/', loc: ' LPSC Grenoble,
+      France', name: "Third JCL (Journ\xE9es Collisionneur Lin\xE9aire)"}
+  date: 12/2014
+  pdf: https://lpsc-indico.in2p3.fr/Indico/event/1084/session/10/contribution/27/material/slides/0.pdf
+  title: Model independant analysis for HZ ($$Z\to qq$$) @ILC250 and FCC
+- abstract: ''
+  conf: {link: 'http://www.icepp.s.u-tokyo.ac.jp/lcws13/', loc: ' LCWS 2013, Tokyo,
+      Japan', name: International Linear Collider Workshop}
+  date: 11/2013
+  pdf: https://agenda.linearcollider.org/event/6000/contributions/27832/attachments/23105/35965/lcws_2013_talk.pdf
+  title: Feasibility of a minimum bias analysis of $$e^+e^-\to ZH \to q\bar{q}+X$$ at
+    250~GeV
+- abstract: ''
+  conf: {link: 'https://gifna.unizar.es/mpgd13/', loc: ' Saragossa, Spain', name: 'Third
+      Conference on Micro-Pattern Gaseous Detectors}'}
+  date: 07/2013
+  pdf: https://indico.cern.ch/event/258852/contributions/1589827/attachments/456021/632031/MPGD13_RD51_haddad_yacine.pdf
+  title: General software digitiser for high granularity gaseous detector
+- abstract: ''
+  conf: {link: 'http://llr.in2p3.fr/chef2013/', loc: ' CHEF 2013, Paris, France',
+    name: Calorimetry for High Energy Frontier}
+  date: 04/2013
+  pdf: https://indico.in2p3.fr/event/7691/contributions/42664/attachments/34426/42395/4_haddad_chef.pdf
+  title: First results of the CALICE-SDHCAL technological prototype
+- abstract: ''
+  conf: {link: 'https://indico.cern.ch/event/313708/', loc: ' CERN-Geneva, Switzerland',
+    name: 7th FCC-ee/TLEP physics workshop}
+  date: 06/2014
+  pdf: https://indico.cern.ch/event/313708/contributions/1687821/attachments/600576/826577/zh_analysis.pdf
+  title: Higgs tagging using $$Z\to qq$$

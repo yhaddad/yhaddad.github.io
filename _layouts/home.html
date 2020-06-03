@@ -1,0 +1,23 @@
+---
+layout: default
+title: Home
+---
+
+<p style="font-size: 250%; font-family: Avenir;">{{ page.title }}</p>
+
+{% if page.image %}
+<div class="about">
+  <div class="cover-author-image">
+    <img src="{{ site.github.url }}/assets/img/{{ page.image }}" alt="wohoo">
+  </div>
+</div>
+{% endif %}
+
+<!--
+<div class='.twitter-box'>
+    {% twitter https://twitter.com/DrYacineHaddad maxwidth=200 limit=3 %}
+</div>
+-->
+
+{{ content }}
+
