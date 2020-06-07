@@ -14,25 +14,32 @@
     margin: 0;
     position: relative;
   }
+  .timeline-h3 {
+    margin-bottom: 1px; 
+    /* margin-top: 1px; */
+  }
   .timeline-date {
     width: 110px;
     float: left;
-    margin-top: 20px;
   }
   .timeline-content {
-    width: 75%;
+    width: 75%; 
     float: left;
     border-left: 3px #4F5051 solid;
-    padding-left: 30px;
+    padding-left: 20px;
+  }
+  .timeline-p {
+    margin-bottom: 1px;
+    margin-top: 1px;
   }
   .timeline-content:before {
     content: '';
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background: #4F5051;
     position: absolute;
-    left: 106px;
-    top: 24px;
+    left: 104.5px;
+    top: 27px;
     border-radius: 100%;
   }
 }
