@@ -1,21 +1,21 @@
 /*
-  Contents:
-    Base
-    Site container
-    Masthead
-    Thumbnail
-    Post
-    Pagination
-    Footer
-    Menu
-    Code
-    Tables
-    Social media icons
-*/
+Contents:
+Base
+Site container
+Masthead
+Thumbnail
+Post
+Pagination
+Footer
+Menu
+Code
+Tables
+Social media icons
+ */
 
 /*
-  Base
-*/
+Base
+ */
 
 body {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
@@ -76,8 +76,8 @@ hr {
 }
 
 /*
-  Site container
-*/
+Site container
+ */
 
 .container {
   margin-left: auto;
@@ -94,8 +94,8 @@ hr {
 }
 
 /*
-  Masthead
-*/
+Masthead
+ */
 
 .masthead {
   padding-top: 0.5rem;
@@ -119,8 +119,8 @@ hr {
 }
 
 /*
-  Thumbnail
-*/
+Thumbnail
+ */
 
 .thumbnail-container {
   max-width: 100%;
@@ -135,8 +135,8 @@ hr {
 }
 
 /*
-  Post
-*/
+Post
+ */
 
 .post-container {
   margin-bottom: 4rem;
@@ -177,8 +177,8 @@ hr {
 }
 
 /*
-  Pagination
-*/
+Pagination
+ */
 
 .pagination {
   overflow: hidden;
@@ -210,8 +210,8 @@ hr {
 }
 
 /*
-  Footer
-*/
+Footer
+ */
 
 .footer {
   color: #999;
@@ -230,8 +230,8 @@ hr {
 }
 
 /*
-  Menu
-*/
+Menu
+ */
 
 .menu {
   padding-top: 0.5rem;
@@ -268,8 +268,8 @@ hr {
 }
 
 /*
-  Code
-*/
+Code
+ */
 
 code,
 pre {
@@ -339,8 +339,8 @@ pre.highlight {
 }
 
 /*
-  Tables
-*/
+Tables
+ */
 
 table {
   border-collapse: collapse;
@@ -358,8 +358,8 @@ th, td {
 }
 
 /*
-  Social media icons
-*/
+Social media icons
+ */
 
 .sharing-icons a {
   padding-right: 10px;
@@ -367,145 +367,145 @@ th, td {
 
 .fa-envelope {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-envelope:hover {
-	color: #f39c12;
+  color: #f39c12;
 }
 
 .fa-twitter {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-twitter:hover {
-	color: #00aced;
+  color: #00aced;
 }
 
 .fa-instagram {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-instagram:hover {
-	color: #375989;
+  color: #375989;
 }
 
 .fa-github {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-github:hover {
-	color: #343434;
+  color: #343434;
 }
 
 .fa-linkedin {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-linkedin:hover {
-	color: #0073a4;
+  color: #0073a4;
 }
 
 .fa-facebook {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-facebook:hover {
-	color: #3d5b99;
+  color: #3d5b99;
 }
 
 .fa-google-plus {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-google-plus:hover {
-	color: #e64a41;
+  color: #e64a41;
 }
 
 .fa-pinterest {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-pinterest:hover {
-	color: #bd081c;
+  color: #bd081c;
 }
 
 .fa-medium {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-medium:hover {
-	color: #00AB6C;
+  color: #00AB6C;
 }
 
 .fa-codepen {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-codepen:hover {
-	color: black;
+  color: black;
 }
 
 .fa-rss-square {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
 }
 
 .fa-rss-square:hover {
-	color: #ff6600;
+  color: #ff6600;
 }
 
 /*
@@ -513,13 +513,13 @@ th, td {
  */
 
 .site-logo {
-    max-height: 85px;
-    margin-bottom: -25px;
-    margin-left: -25px;
+  max-height: 85px;
+  margin-bottom: -25px;
+  margin-left: -25px;
 }
 .site-logo:hover {
-    -webkit-filter: drop-shadow(0px 0px 5px #222);
-    filter: drop-shadow(0px 0px 5px #222);
+  -webkit-filter: drop-shadow(0px 0px 5px #222);
+  filter: drop-shadow(0px 0px 5px #222);
 }
 
 /* about */
@@ -541,7 +541,7 @@ th, td {
   width: 100%;
   height: auto;
   -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   -webkit-transition: -webkit-transform 0.35s;
   transition: -webkit-transform 0.35s;
   -o-transition: transform 0.35s;
@@ -551,5 +551,41 @@ th, td {
 
 .about img:hover {
   -webkit-transform: scale3d(1.1, 1.1, 1.1);
-          transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+
+
+/* for contact form */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  color: red;
+}
+
+form {
+  width: auto;
+  border-color: black;
+  border-width: 1px;
+
 }

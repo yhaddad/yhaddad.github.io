@@ -11,7 +11,9 @@ After my bachelor’s degree in theoretical physics, I decided that particle phy
 <ul class="timeline">
   {% for event in site.data.timeline %}
   <li>
-    <p class="timeline-date"> {{ event.date }}</p>
+    <p class="timeline-date">
+      {{ event.date }}
+    </p>
     <div class="timeline-content">
       <h3 class="timeline-h3">{{ event.title }}</h3>
       <p class="timeline-p">{{ event.content }}</p>

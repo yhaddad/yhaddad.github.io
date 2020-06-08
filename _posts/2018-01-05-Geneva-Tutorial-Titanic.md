@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Welcome to Lagrange!"
+title: "What are you sinking about?"
 author: "Yacine Haddad"
 categories: journal
-tags: [ML, tutorial]
+tags: [ML, Data Analysis, tutorial]
 image: 01-titanic.jpg 
 ---
+
 
 This notebook is a gentle introduction to data analysis in python step-by-step. Starting from raw data to making prediction model on the Titanic Survivors dataset.
 
