@@ -7,11 +7,11 @@ disqus:
 google-ID: 'UA-98286067-1'
 
 menu:
-- {name: 'About'  , path: 'menu', url: 'about.html'}
-- {name: 'Blog'   , path: 'blog', url: 'index.html'}
-- {name: 'Talks'  , path: 'menu', url: 'talks.html'}
+- {name: 'About'    , path: 'menu', url: 'about.html'}  
+- {name: 'Writtings', path: 'blog', url: 'index.html'}
+- {name: 'Talks'    , path: 'menu', url: 'talks.html'}
 - {name: 'Publications', path: 'menu', url: 'publications.html'}
-- {name: 'Contact', path: 'menu', url: 'contact.html'}
+- {name: 'Contact'  , path: 'menu', url: 'contact.html'}
 #- {name: 'Archive', path: 'menu', url: 'writing.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer

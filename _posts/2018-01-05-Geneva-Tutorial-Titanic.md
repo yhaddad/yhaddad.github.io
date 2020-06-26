@@ -3,35 +3,26 @@ layout: post
 title: "What are you sinking about?"
 author: "Yacine Haddad"
 categories: journal
-tags: [ML, Data Analysis, tutorial]
+date: 12/2017
+tags: [ML, Data Analysis, tutorial, kaggle]
 image: 01-titanic.jpg 
 ---
 
+Back when I was living in London, I was attending a meetup called the Kaggle-Dojo. A meetup about data science, machine learning. It was an occation to just hangout with a bunch of pizza eateres while trying to solve some challanges together. It was a fun and enjoyable encouter. When I moved to Geneva, I started looking for similar meetups, and sadely anough, beside wine testing or (paid) jugging meetups, there was not much meetup about data-science. With my friend Vince, who also moved almost at the same time from London we decided to team with a local pationate David and create our own mettup. For the first meeting we decided to give a gentle introduction to data-science using python and what you can do with a dataset. The following post is the tuturial I prepared. 
 
-This notebook is a gentle introduction to data analysis in python step-by-step. Starting from raw data to making prediction model on the Titanic Survivors dataset.
 
-On this example, I will cover some basics on pandas, `numpy` array and data-visualisation.
-I have based this example on few resources that are listed below:
+On this example, I will cover some basics on pandas, numpy array and data-visualisation.
+I have been inspired by few resources listed below:
 * https://www.kaggle.com/jeffd23/scikit-learn-ml-from-start-to-finish
 * https://www.kaggle.com/mrisdal/exploring-survival-on-the-titanic
 * https://www.kaggle.com/jasonm/large-families-not-good-for-survival
 
-We start first by setting the environment and loading the dataset from Kaggle website aka [https://www.kaggle.com/c/titanic](https://www.kaggle.com/c/titanic#tutorials). Then explore the data through various visualisation examples that will help us understand the dataset that we are analysing and shape new variables to be used in the predictive model. 
+We start first by setting the environment and loading the dataset from [Kaggle](https://www.kaggle.com/c/titanic#tutorials). Then explore the data through various visualisations examples that will help us understand the dataset that we are analysing and shape new variables to be used in the predictive model. 
 
-1. [Dive into data](#Dave into datal)
-    1. [What story data tell us ?](## What story data tell us ?)
-    2. [Building new features](## Building new features )
-    3. [Dealing with missing data](## Dealing with missing data)
-2. [Making predictive model](#Making predictive model)
-    1. [What model to choose ?](## What model to choose ?)
-    2. [Fine tune my model ](## Fine tune my model )
-3. [Make submission](# Make submission)
+1. [Dive into data](#Dive into data)
+2. [Making predictive model](#Making a predictive model)
 
 ## Dive into data
-
-![.](http://s2.quickmeme.com/img/56/566939e4d16f26f06f1b648b74270c264240bb66a4d778e53c3f85f84ab3976c.jpg)
-
-First things first! If you want to be a data scientist, then you need to get some data and dive in it. Kaggle is probably the place to find some data to play with an get started as an analyst. As I am using python, you need to import your exploration kit that will allow you to load, visualise and, most importantly, understand your data. For this tutorial, we ill import numpy and pandas for data manipulation, matplotlib and seaborn for data visualisation: 
 
 
 ```python
@@ -39,46 +30,23 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from pprint import pprint
 
-plt.style.use('seaborn-dark-palette')
+# plt.style.use('physics')
 %matplotlib inline
 ```
-
-The Titanic challenge comes with a training and validation datasets. The first can be used to understand the content of the data and train a model to make a prediction, and then the second can be used to test the model that we will build. 
-
-``Pandas`` has a built-in function to read and load CSV files and load the data directly into a ``Pandas`` dataframe.
 
 
 ```python
 # loading the dataset into pandas dataframes
+
+# data_train = pd.read_csv('/Users/yhaddad/Desktop/train.csv')
+# data_valid = pd.read_csv('/Users/yhaddad/Desktop/test.csv')
+
 data_train = pd.read_csv('../input/train.csv')
 data_valid = pd.read_csv('../input/test.csv')
-```
 
-> Sometimes, if you can, you can open the data files diretly and look into the data. This will allow you to spot any requirement to read the data, for example in case where the columns are separated by `;` instead of `,`. You can also add columns names in there are not present in the datafile... etc
-
-
-## What story data tell us ?
-When get hands to data for the first time, it good to know the origin and the context of the data, any information that might come with data is can be useful to build your model. Kaggle page for this dataset (that you can find  [here](http://https://www.kaggle.com/c/titanic/data)), is quite illuminating:
-
-| Variable        | Definition           | 
-| ------------- |:-------------:| 
-| survival    | Survival	0 = No, 1 = Yes | 
-| pclass	  | Ticket class	1 = 1st, 2 = 2nd, 3 = 3rd|
-| sex	        | Sex	|
-| Age 	      | Age in years	|
-| sibsp	     | # of siblings / spouses aboard the Titanic	|
-| parch	    | # of parents / children aboard the Titanic	|
-| ticket 	| Ticket number	|
-| fare	 |Passenger fare	|
-| cabin	|Cabin number	|
-| embarked|	Port of Embarkation	C = Cherbourg, Q = Queenstown, S = Southampton|
-
-Ah ha! Now, our data make more sens, isn't it ? It a good practice to see what the data contains, and `describe()` and `dead` are the best `pandas` functions to do that:
-
-
-```python
-# return first 5 rows in the dataframe
+# print the first 5 rows in the train dataset
 data_train.head(5)
 ```
 
@@ -86,6 +54,19 @@ data_train.head(5)
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -186,150 +167,24 @@ data_train.head(5)
 
 
 
+This challenge comes with a training and validation datasets. The first can be used to understand the content of the data and train a model to make a prediction, and then the second can be used to test the model that we will build. 
+
+The previous output shows the list of Titanic's passengers and their corresponding information, such as the name, send, age, the classes .. etc. The full list of features can be listed using the following command:
+
 
 ```python
-# print a dcription of the dataset
-data_train.describe()
+data_train.columns.values
 ```
 
 
 
 
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>PassengerId</th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Fare</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>891.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-      <td>714.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>446.000000</td>
-      <td>0.383838</td>
-      <td>2.308642</td>
-      <td>29.699118</td>
-      <td>0.523008</td>
-      <td>0.381594</td>
-      <td>32.204208</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>257.353842</td>
-      <td>0.486592</td>
-      <td>0.836071</td>
-      <td>14.526497</td>
-      <td>1.102743</td>
-      <td>0.806057</td>
-      <td>49.693429</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>0.420000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>223.500000</td>
-      <td>0.000000</td>
-      <td>2.000000</td>
-      <td>20.125000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>7.910400</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>446.000000</td>
-      <td>0.000000</td>
-      <td>3.000000</td>
-      <td>28.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>14.454200</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>668.500000</td>
-      <td>1.000000</td>
-      <td>3.000000</td>
-      <td>38.000000</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>31.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>891.000000</td>
-      <td>1.000000</td>
-      <td>3.000000</td>
-      <td>80.000000</td>
-      <td>8.000000</td>
-      <td>6.000000</td>
-      <td>512.329200</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+    array(['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp',
+           'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], dtype=object)
 
 
 
-From the previous outputs,  we can tell the nature of the data. each row represent a passenger and the columns represent some characteristic that describe the passenger, such as the ticket fare, Age, Name... etc.  We also can tell that the dataset has some missing values, for example the column `Age` has only 714 rows instead of 891, which means that 177 values are missing.  In the column Cabin, we can see that may passenger, with no or unknown cabin. We will see later how to deal with missing data later, and for now let visualise our data. 
-
-We wanna see, if the parity is respected during the disaster, and therefore can look to the fraction of females and males survived during the disaster.
-> *Such investigation can be done in two ways, numerical or graphical. But you know probably that saying: A picture is worth a thousand words, so option 2 will be ;) *
-
-
-```python
-data_train.Sex[data_train.Survived==1].hist(bins=2,range=[-0.5,1.5], alpha=0.5, normed=1, label='survived')
-data_train.Sex[data_train.Survived==0].hist(bins=2,range=[-0.5,1.5], alpha=0.5, normed=1, label='sinked')
-plt.legend()
-plt.show()
-```
-
-
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_10_0.png)
-
-
-Wow! It is clear, in 2012, that rule of "children and **women** first" is well respected and this histogram is the proof. more than 65% of the females survived against roughly 30% of males. This is just an example of what a histogram can tell us. 
-> *You can notice here that the historgrams are normalised. The reason is we want to have instead of a simple count, the survival rate for each sex.*
-
-Now, let use Seaborn, a wonderful tool that allows us to make similar histograms, by combining 2 or 3 features, in only one line of code. For example, we want to see the survival rate by ticket class for male and females. This can be achieved by calling `barplots` as such:
+First, we want to know what is the fraction of females and males survived during the disaster. For that we have two options, using data visualisation or inline calculation:
 
 
 ```python
@@ -339,10 +194,10 @@ plt.show()
 ```
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_12_0.png)
+![png](output_7_0.png)
 
 
-The Titanic has collected passengers in 3 different ports. It departed from **Southampton (England)** and made two stops in **Cherbourg (France)** and **Queenstown (Irland)**. We want to see if the port of embarkment has something todo with the survival rate. We did then the same exercise as before, here we go:
+The Titanic has collected passengers in 3 different ports. It departed from **Southampton (England)** and made two stops in **Cherbourg (France)** and **Queenstown (Irland)**. We want to see if the port of embarkment has something todo with the survival rate. We di then the same exercise as before, here we go :
 
 
 ```python
@@ -351,10 +206,10 @@ plt.show()
 ```
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_14_0.png)
+![png](output_9_0.png)
 
 
-Obviously, the survival rate seems unbalanced! it seems like the French passengers had more chances of survival. How is this possible? We will try to find out later what secret hides behind this observation.
+Obviously, the survival rate seems unballenced! it seems like the french passenger had more chances of survival. How is this possible? We will try to find out later what secret hides behind this obervation.
 
 We want to simplify the variable age to include ages tranches. We could then define a function that does that for us:
 
@@ -380,7 +235,7 @@ plt.show()
 ```
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_17_0.png)
+![png](output_12_0.png)
 
 
 Following the same logic, we can also extract information about the cabin, and fill missing data with a "None" variable. We could also extract the information about the title of the passenger, this could be helpful when we are going to building a prediction model.
@@ -431,7 +286,7 @@ plt.show()
 ```
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_21_0.png)
+![png](output_16_0.png)
 
 
 
@@ -458,7 +313,7 @@ plt.show()
 ```
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_23_0.png)
+![png](output_18_0.png)
 
 
 
@@ -629,7 +484,7 @@ plt.show()
 ```
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_25_0.png)
+![png](output_20_0.png)
 
 
 
@@ -640,7 +495,7 @@ plt.show()
 ```
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_26_0.png)
+![png](output_21_0.png)
 
 
 ### Does a family size matters ?
@@ -661,12 +516,12 @@ plt.axvline(0.5, ls='--')
 
 
 
-    <matplotlib.lines.Line2D at 0x111cb5d50>
+    <matplotlib.lines.Line2D at 0x7fd8f71e0e48>
 
 
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_29_1.png)
+![png](output_24_1.png)
 
 
 
@@ -678,24 +533,12 @@ sns.countplot(x="Fsize", hue="Survived", data=data_train)
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x111a61e10>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fd8f731fd30>
 
 
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_30_1.png)
-
-
-
-```python
-data_train.Age[data_train.Survived==1].hist(bins=80,range=[0,80], alpha=0.5, normed=1, label='survived')
-data_train.Age[data_train.Survived==0].hist(bins=80,range=[0,80], alpha=0.5, normed=1, label='sinked')
-plt.legend()
-plt.show()
-```
-
-
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_31_0.png)
+![png](output_25_1.png)
 
 
 
@@ -1065,7 +908,7 @@ plot_correlation_map( data_train )
 ```
 
 
-![png](/assets/ipynb/Geneva-Tutorial-Titanic_files/Geneva-Tutorial-Titanic_36_0.png)
+![png](output_30_0.png)
 
 
 
@@ -1212,13 +1055,13 @@ for i, clf in clfs.items():
     ))
 ```
 
-    /usr/local/lib/python2.7/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+    /opt/conda/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
       "This module will be removed in 0.20.", DeprecationWarning)
 
 
                 LogisticRegression CV Score : Mean - 0.786 +\- 0.01672 (Min - 0.764, Max - 0.808)
-        GradientBoostingClassifier CV Score : Mean - 0.841 +\- 0.01686 (Min - 0.815, Max - 0.865)
-            RandomForestClassifier CV Score : Mean - 0.81 +\- 0.01962 (Min - 0.781, Max - 0.837)
+            RandomForestClassifier CV Score : Mean - 0.805 +\- 0.02117 (Min - 0.77, Max - 0.831)
+        GradientBoostingClassifier CV Score : Mean - 0.842 +\- 0.01519 (Min - 0.82, Max - 0.865)
 
 
 ### Fine tune classifier parameters
@@ -1250,8 +1093,8 @@ print ("CV Score : Mean - %.4g | Std - %.4g | Min - %.4g | Max - %.4g" % (
 ))
 ```
 
-    {'min_samples_split': 0.001, 'subsample': 0.7, 'max_depth': 2, 'min_samples_leaf': 5}
-    CV Score : Mean - 0.8328 | Std - 0.01057 | Min - 0.8156 | Max - 0.8436
+    {'max_depth': 2, 'min_samples_leaf': 3, 'min_samples_split': 0.0045999999999999999, 'subsample': 0.7}
+    CV Score : Mean - 0.8294 | Std - 0.01223 | Min - 0.8146 | Max - 0.8427
 
 
 Run everything and go make yourself  a tea or a coffe, this might take a while. 
@@ -1334,10 +1177,15 @@ df.head(5)
     <tr>
       <th>4</th>
       <td>896</td>
-      <td>1</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
 </div>
 
 
+
+
+```python
+
+```
