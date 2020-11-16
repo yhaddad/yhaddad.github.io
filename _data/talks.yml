@@ -1,4 +1,10 @@
 - abstract: ''
+  conf: {link: 'https://indico.cern.ch/event/922192/', loc: ' ONLINE ONLY', 
+    name: 'The 17th Workshop of the LHC Higgs Working Group'}
+  date: 10/11/2020
+  pdf: https://indico.cern.ch/event/922192/contributions/4057339/attachments/2140439/3606411/STXS-uncertainties-VBF-11-2020.pdf
+  title: STXS uncertainties in VBF/VH/ttH bins
+- abstract: ''
   conf: {link: 'https://indico.cern.ch/event/931479/', loc: ' CERN, Geneva, Switzerland', 
     name: '[STXS] Meeting on Updates to Uncertainties for Stage 1.2'}
   date: 25/06/2020
